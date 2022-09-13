@@ -1,0 +1,15 @@
+---
+given:
+- stage: "source1"
+  link: "from_source_to_target"
+  path: "source1-from_source_to_target.csv"
+when:
+  job: "RZ_Txt_load"
+  controller: null
+  parameters: {}
+then:
+- stage: "target1"
+  link: "from_source_to_target"
+  path: "target1-from_source_to_target.csv"
+  cluster: null
+  ignore: null
